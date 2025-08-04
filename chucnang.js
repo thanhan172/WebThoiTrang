@@ -10,7 +10,8 @@ function themvaogiohang(product) {
     (sp) =>
       sp.ten === product.ten &&
       sp.hinh === product.hinh &&
-      sp.gia === product.gia
+      sp.gia === product.gia &&
+      sp.size === product.size
   );
   if (index !== -1) {
     if (!giohang[index].soluong) {
@@ -39,31 +40,45 @@ function capnhatsoluong() {
   soluong.innerText = giohang.length;
 }
 
-document.querySelectorAll(".buttons button:last-child").forEach((nut) => {
-  // Hàm gắn vào nút thêm vào giỏ hàng
-  nut.addEventListener("click", () => {
-    const sp = nut.closest(".cloths > div");
-    const ten = sp.querySelector("p").innerText;
-    const gia = sp.querySelector(".gia").innerText;
-    const hinh = sp.querySelector("img").getAttribute("src");
+document.querySelectorAll(".tung_loai_sp").forEach((khungSP) => {
+  const nutGiohang = khungSP.querySelector(
+    ".tung_loai_sp_nut button:first-child"
+  );
+
+  nutGiohang.addEventListener("click", () => {
+    const ten = khungSP.querySelector(".tung_loai_sp_1 p").innerText;
+    const gia = khungSP.querySelector(
+      ".tung_loai_sp_1 p:nth-child(2)"
+    ).innerText;
+    const hinh = khungSP.querySelector(".hinh_anh").getAttribute("src");
+    const kichco = khungSP.querySelector(".size.active");
+    console.log(kichco);
+    if (kichco === null) {
+      alert("Bạn chưa chọn kích thước!");
+      return;
+    }
+
+    const size = kichco.innerText;
 
     const sanpham = {
       ten: ten,
       gia: gia,
       hinh: hinh,
+      size: size,
     };
+
     themvaogiohang(sanpham);
   });
 });
-
 function inGioHang() {
   // Hàm in các sản phẩm ra giỏ hàng
   const list = JSON.parse(localStorage.getItem("giohang")) || [];
   const khung = document.querySelector(".InGioHang");
 
   if (list.length == 0) {
-    khung.innerHTML = `<div class=Gio_hang_trong><img src="images/Screenshot 2025-07-21 161313.png" alt="">
+    khung.innerHTML = `<div class=Gio_hang_trong><img src="./images/Giohang.png" alt="Giohang" />
     <p>Hiện không có sản phẩm nào trong giỏ hàng.</p></div> `;
+    console.log(khung);
     const Nutthanhtoan = document.querySelector("#nutthanhtoan");
     if (Nutthanhtoan) {
       Nutthanhtoan.style.display = "none";
@@ -72,6 +87,7 @@ function inGioHang() {
   }
   let ds = "<ul>";
   ds += `<div class="chu_tren_sp"><strong>Thông tin sản phẩm</strong>
+    <p>Size</p>
     <p>Giá</p>
     <p>Số lượng</p>
     </div>`;
@@ -83,7 +99,7 @@ function inGioHang() {
     ds += `
       <li>
         <img src="${sp.hinh}" />
-        <strong>${sp.ten} </strong> <p>${sp.gia}</p>
+        <strong>${sp.ten} </strong> <p>${sp.size} <p>${sp.gia}</p>
         <span>${sp.soluong}</span>
         <button onclick="XoaSanPham(${index})">Xóa</button>      
       </li>
@@ -106,3 +122,96 @@ function XoaSanPham(index) {
 }
 document.addEventListener("DOMContentLoaded", capnhatsoluong); // Cập nhật số lượng mỗi khi load lại trang
 document.addEventListener("DOMContentLoaded", inGioHang); // Để hiện giỏ hàng
+
+/* lọc theo giá */
+function locTheoGia() {
+  const filterValue = document.getElementById("filterPrice").value;
+  const Danhmucs = document.querySelectorAll(".danhmucs");
+  Danhmucs.forEach((danhmuc) => {
+    const products = danhmuc.querySelectorAll(".cloths .product-item");
+    let count = 0;
+    products.forEach((product) => {
+      const giaText = product.querySelector(".gia").innerText;
+      const giaNumber = parseInt(giaText.replace(/[^\d]/g, ""));
+
+      let show = true;
+      if (filterValue === "duoi200" && giaNumber >= 200000) {
+        show = false;
+      } else if (
+        filterValue === "200-300" &&
+        (giaNumber < 200000 || giaNumber > 300000)
+      ) {
+        show = false;
+      } else if (filterValue === "tren300" && giaNumber <= 300000) {
+        show = false;
+      }
+
+      product.style.display = show ? "block" : "none";
+      if (show) {
+        count++;
+      }
+    });
+    console.log(count);
+    danhmuc.style.display = count > 0 ? "block" : "none";
+  });
+}
+
+/* tim kiếm */
+document.addEventListener("DOMContentLoaded", function () {
+  const nutTimKiem = document.querySelector(".search_nut");
+  const oNhap = document.querySelector(".search_input");
+
+  function timKiemSanPham() {
+    const tuKhoa = oNhap.value.toLowerCase().trim();
+    const dsDanhmuc = document.querySelectorAll(".danhmucs");
+    dsDanhmuc.forEach(function (Danhmuc) {
+      const dsSanPham = Danhmuc.querySelectorAll(".product-item");
+      let Cosp = false;
+
+      dsSanPham.forEach(function (sp) {
+        const tenSP = sp.querySelector("p").innerText.toLowerCase();
+        if (tenSP.includes(tuKhoa)) {
+          sp.style.display = "inline-block";
+          Cosp = true;
+        } else {
+          sp.style.display = "none";
+        }
+      });
+      if (Cosp) {
+        Danhmuc.style.display = "block";
+      } else Danhmuc.style.display = "none";
+    });
+  }
+
+  nutTimKiem.addEventListener("click", timKiemSanPham);
+
+  oNhap.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      timKiemSanPham();
+    }
+  });
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const size = document.querySelectorAll(".size");
+  size.forEach((option) => {
+    option.addEventListener("click", function () {
+      size.forEach((opt) => opt.classList.remove("active"));
+      this.classList.add("active");
+    });
+  });
+});
+
+const hinhanh = document.querySelector(".hinh_anh");
+const hinh_anh_full = document.getElementById("full");
+const daux = document.getElementById("dau_x");
+const zoom = document.getElementById("Imgzoom");
+
+hinhanh.addEventListener("click", function () {
+  zoom.src = this.src;
+  hinh_anh_full.style.display = "flex";
+});
+
+daux.addEventListener("click", function () {
+  hinh_anh_full.style.display = "none";
+});

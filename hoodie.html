@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hoodie</title>
     <link rel="stylesheet" href="Style.css" />
+    <link rel="icon" href="./images/icon_logo.png" />
   </head>
   <body>
     <div class="wrapper">
@@ -12,7 +13,7 @@
         <div class="search">
           <input
             type="text"
-            placeholder="Tìm kiếm sản phẩm..."
+            placeholder="Tìm trong Hoodie..."
             class="search_input"
           />
           <button class="search_nut">
@@ -28,19 +29,6 @@
             />
             <span class="gio_hang_sl">0</span>
           </button>
-
-          <div class="menu">
-            <nav class="bang_menu">
-              <hr
-                style="width: 100%; border: none; border-top: 1px solid #e0e0e0"
-              />
-              <div class="text_menu">MENU</div>
-              <ul type="none">
-                <li><a href="">Đăng nhập</a></li>
-                <li><a href="">Đăng kí</a></li>
-              </ul>
-            </nav>
-          </div>
         </div>
         <div class="text-head">
           <a href="index.html">Trang chủ</a>
@@ -48,7 +36,7 @@
           <a href="index.html" class="logo">
             <p>CoolWear</p>
           </a>
-          <a href="">Bảng size</a>
+          <a href="bangsize.html">Bảng size</a>
           <a href="">Hệ thống cửa hàng</a>
         </div>
         <hr class="duong_ke" />
@@ -61,114 +49,103 @@
           <a href="hoodie.html">Hoodie</a>
           <a href="quan.html">Quần</a>
         </div>
+        <!-- Lọc theo gia tien -->
+        <div class="loc_gia" style="text-align: center; margin-bottom: 15px">
+          <img
+            src="https://bizweb.dktcdn.net/100/415/697/themes/1034668/assets/filter.svg?1754039006665"
+            alt="Filter"
+          />
+          <p>Fillter</p>
+          <select id="filterPrice" onchange="locTheoGia()">
+            <option value="all">Giá Tiền</option>
+            <option value="duoi200">Dưới 200k</option>
+            <option value="200-300">200k - 300k</option>
+            <option value="tren300">Trên 300k</option>
+          </select>
+        </div>
         <div class="san_pham">
           <hr />
         </div>
-        <div>
+        <div class="danhmucs">
           <!--Hoodie-->
           <div class="font">
             <a href=""><p>Hoodie</p></a>
           </div>
           <div class="cloths">
-            <div>
-              <div>
-                <a href=""
-                  ><img src="images/hoodie9.webp" alt="" />
-                  <p>Hoodie Alex Cool</p></a
-                >
-              </div>
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="hoodie9.html"
+                ><img src="images/hoodie9.webp" alt="" />
+                <p>Hoodie Alex Cool</p></a
+              >
+
               <div class="gia"><p>200.000đ</p></div>
-              <div class="buttons">
-                <button>Mua ngay</button> <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="hoodie2.html"
                 ><img src="images/hoodie2.webp" alt="" />
                 <p>Hoodie trắng basic</p></a
               >
               <div class="gia">180.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="hoodie3.html"
                 ><img src="images/hoodie3.webp" alt="" />
                 <p>Hoodie đen basic</p></a
               >
               <div class="gia">190.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="hoodie4.html"
                 ><img src="images/hoodie4.webp" alt="" />
                 <p>Hoodie trắng logo</p></a
               >
               <div class="gia">280.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="hoodie5.html"
                 ><img src="images/hoodie5.webp" alt="" />
                 <p>Hoodie trắng logo cappy para</p></a
               >
               <div class="gia">280.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="hoodie6.html"
                 ><img src="images/hoodie6.webp" alt="" />
-                <p>Hoodie trắng logo Dual Match</p></a
+                <p>Hoodie logo Dual Match</p></a
               >
               <div class="gia">280.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="hoodie7.html"
                 ><img src="images/hoodie7.webp" alt="" />
                 <p>Hoodie trắng WinD</p></a
               >
               <div class="gia">280.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="hoodie8.html"
                 ><img src="images/hoodie8.webp" alt="" />
                 <p>Hoodie Vestores</p></a
               >
               <div class="gia">280.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
           </div>
         </div>
-        <div class="thong_bao">Thêm vào giỏ hàng thành công !</div>
       </main>
       <div class="ban_quyen">
         <footer>

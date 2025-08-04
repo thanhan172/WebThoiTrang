@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tất cả sản phẩm</title>
-
+    <link rel="icon" href="./images/icon_logo.png" />
     <link rel="stylesheet" href="Style.css" />
   </head>
   <body>
@@ -29,19 +29,6 @@
             />
             <span class="gio_hang_sl">0</span>
           </button>
-
-          <div class="menu">
-            <nav class="bang_menu">
-              <hr
-                style="width: 100%; border: none; border-top: 1px solid #e0e0e0"
-              />
-              <div class="text_menu">MENU</div>
-              <ul type="none">
-                <li><a href="">Đăng nhập</a></li>
-                <li><a href="">Đăng kí</a></li>
-              </ul>
-            </nav>
-          </div>
         </div>
         <div class="text-head">
           <a href="index.html">Trang chủ</a>
@@ -49,7 +36,7 @@
           <a href="index.html" class="logo">
             <p>CoolWear</p>
           </a>
-          <a href="">Bảng size</a>
+          <a href="bangsize.html">Bảng size</a>
           <a href="">Hệ thống cửa hàng</a>
         </div>
         <hr class="duong_ke" />
@@ -62,838 +49,647 @@
           <a href="hoodie.html">Hoodie</a>
           <a href="quan.html">Quần</a>
         </div>
+        <!-- Lọc theo gia tien -->
+        <div class="loc_gia" style="text-align: center; margin-bottom: 15px">
+          <img
+            src="https://bizweb.dktcdn.net/100/415/697/themes/1034668/assets/filter.svg?1754039006665"
+            alt="Filter"
+          />
+          <p>Fillter</p>
+          <select id="filterPrice" onchange="locTheoGia()">
+            <option value="all">Giá Tiền</option>
+            <option value="duoi200">Dưới 200k</option>
+            <option value="200-300">200k - 300k</option>
+            <option value="tren300">Trên 300k</option>
+          </select>
+        </div>
         <div class="san_pham">
           <h3>Tất cả sản phẩm</h3>
           <hr />
         </div>
-        <div>
+        <div class="danhmucs">
           <!--Áo thun-->
           <div class="font"><a href="aothun.html">Áo thun</a></div>
           <div class="cloths">
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="aothun1.html"
                 ><img src="images/1.webp" alt="" /><br />
                 <p>Áo thun đen form rộng</p></a
               >
               <div class="gia">200.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="aothun10.html"
                 ><img src="images/10.webp" alt="" /><br />
                 <p>Áo thun trắng form rộng</p></a
               >
               <div class="gia">300.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="aothun11.html"
                 ><img src="images/11.webp" alt="" /><br />
                 <p>Áo thun xanh</p></a
               >
               <div class="gia">200.200đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="aothun12.html"
                 ><img src="images/12.webp" alt="" /><br />
                 <p>Áo thun vàng</p>
               </a>
               <div class="gia">100.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="aothun9.html"
                 ><img src="images/9.webp" alt="" /><br />
                 <p>Áo thun trắng Lorents</p>
               </a>
               <div class="gia">210.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="aothun2.html"
                 ><img src="images/2.webp" alt="" /><br />
                 <p>Áo thun aqua hoạ tiết</p>
               </a>
               <div class="gia">150.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="aothun3.html"
                 ><img src="images/3.webp" alt="" /><br />
                 <p>Áo thun hồng hoạ tiết</p>
               </a>
               <div class="gia">150.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="aothun6.html"
                 ><img src="images/6.webp" alt="" /><br />
                 <p>Áo thun Insomnia Club</p>
               </a>
               <div class="gia">300.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="aothun13.html"
                 ><img src="images/13.webp" alt="" /><br />
                 <p>Áo thun Joli hoạ tiết</p>
               </a>
               <div class="gia">200.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
-                ><img src="images/aoteelabred.webp" alt="" /><br />
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="aothunteelab.html"
+                ><img src="../images/aoteelabred.webp" alt="" /><br />
                 <p>Áo thun Teelab 88</p>
               </a>
               <div class="gia">250.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="aothunlacda.html"
                 ><img src="images/aolacda.webp" alt="" /><br />
                 <p>Áo thun đen hoạ tiết lạc đà</p>
               </a>
               <div class="gia">180.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="aothuness.html"
                 ><img src="images/essential.webp" alt="" /><br />
                 <p>Áo thun Essential</p>
               </a>
               <div class="gia">220.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
           </div>
         </div>
-        <div>
+        <div class="danhmucs">
           <!--Áo polo-->
           <div class="font"><a href="aopolo.html">Áo polo</a></div>
           <div class="cloths">
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="aopolo1.html"
                 ><img src="images/polo1.webp" alt="" />
                 <p>Áo polo đen</p>
               </a>
               <div class="gia">200.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="aopolo2.html"
                 ><img src="images/polo2.webp" alt="" />
                 <p>Áo polo trắng sọc</p></a
               >
               <div class="gia">190.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="aopolo3.html"
                 ><img src="images/polo3.webp" alt="" />
                 <p>Áo polo xanh</p></a
               >
               <div class="gia">290.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="aopolo5.html"
                 ><img src="images/polo5.webp" alt="" />
                 <p>Áo polo đen trắng</p></a
               >
               <div class="gia">150.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="aopolo6.html"
                 ><img src="images/polo6.webp" alt="" />
                 <p>Áo polo len đỏ</p></a
               >
               <div class="gia">150.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="aopolo7.html"
                 ><img src="images/polo7.webp" alt="" />
                 <p>Áo polo sọc ngang</p></a
               >
               <div class="gia">180.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="aopolo8.html"
                 ><img src="images/polo8.webp" alt="" />
                 <p>Áo polo trắng basic</p></a
               >
               <div class="gia">251.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="aopolo9.html"
                 ><img src="images/polo9.webp" alt="" />
                 <p>Áo polo Treak</p></a
               >
               <div class="gia">158.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="aopolo10.html"
                 ><img src="images/polo10.webp" alt="" />
-                <p>Áo polo đen trắng</p></a
+                <p>Áo polo Morpheus</p></a
               >
               <div class="gia">150.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="aopolo11.html"
                 ><img src="images/polo11.webp" alt="" />
                 <p>Áo polo Luminos</p></a
               >
               <div class="gia">222.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="aopolo12.html"
                 ><img src="images/polo12.webp" alt="" />
                 <p>Áo polo Teelab</p></a
               >
               <div class="gia">150.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="aopolo13.html"
                 ><img src="images/polo13.webp" alt="" />
                 <p>Áo polo Odin Club</p></a
               >
               <div class="gia">225.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
           </div>
         </div>
 
-        <div>
+        <div class="danhmucs">
           <!--Áo sơ mi-->
           <div class="font"><a href="aosomi.html">Áo sơ mi</a></div>
           <div class="cloths">
-            <div>
-              <div>
-                <a href=""
-                  ><img src="images/somi1.webp" alt="" />
-                  <p>Áo sơ mi logo karants</p></a
-                >
-              </div>
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="aosomi1.html"
+                ><img src="images/somi1.webp" alt="" />
+                <p>Áo sơ mi logo karants</p></a
+              >
+
               <div class="gia">200.00đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <div>
-                <a href=""
-                  ><img src="images/somi2.webp" alt="" />
-                  <p>Áo sơ mi đen</p></a
-                >
-              </div>
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="aosomi1.html"
+                ><img src="images/somi2.webp" alt="" />
+                <p>Áo sơ mi đen</p></a
+              >
+
               <div class="gia">220.00đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <div>
-                <a href=""
-                  ><img src="images/somi3.webp" alt="" />
-                  <p>Áo sơ mi trắng</p></a
-                >
-              </div>
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="aosomi3.html"
+                ><img src="images/somi3.webp" alt="" />
+                <p>Áo sơ mi trắng</p></a
+              >
+
               <div class="gia">180.00đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <div>
-                <a href=""
-                  ><img src="images/somi4.webp" alt="" />
-                  <p>Áo sơ mi xanh</p></a
-                >
-              </div>
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="aosomi4.html"
+                ><img src="images/somi4.webp" alt="" />
+                <p>Áo sơ mi xanh</p></a
+              >
+
               <div class="gia">250.00đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <div>
-                <a href=""
-                  ><img src="images/somi5.webp" alt="" />
-                  <p>Áo sơ mi nâu caro</p></a
-                >
-              </div>
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="aosomi5.html"
+                ><img src="images/somi5.webp" alt="" />
+                <p>Áo sơ mi nâu caro</p></a
+              >
+
               <div class="gia">250.00đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <div>
-                <a href=""
-                  ><img src="images/somi6.webp" alt="" />
-                  <p>Áo sơ mi đen Karants</p></a
-                >
-              </div>
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="aosomi6.html"
+                ><img src="images/somi6.webp" alt="" />
+                <p>Áo sơ mi đen Karants</p></a
+              >
+
               <div class="gia">210.00đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <div>
-                <a href=""
-                  ><img src="images/somi7.webp" alt="" />
-                  <p>Áo sơ mi đỏ cà vạt</p></a
-                >
-              </div>
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="aosomi7.html"
+                ><img src="images/somi7.webp" alt="" />
+                <p>Áo sơ mi đỏ cà vạt</p></a
+              >
+
               <div class="gia">260.00đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <div>
-                <a href=""
-                  ><img src="images/somi8.webp" alt="" />
-                  <p>Áo sơ mi trắng cà vạt</p></a
-                >
-              </div>
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="aosomi8.html"
+                ><img src="images/somi8.webp" alt="" />
+                <p>Áo sơ mi trắng cà vạt</p></a
+              >
+
               <div class="gia">250.00đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <div>
-                <a href=""
-                  ><img src="images/somi9.webp" alt="" />
-                  <p>Áo sơ sọc trắng dọc</p></a
-                >
-              </div>
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="aosomi9.html"
+                ><img src="images/somi9.webp" alt="" />
+                <p>Áo sơ mi sọc trắng dọc</p></a
+              >
+
               <div class="gia">250.00đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <div>
-                <a href=""
-                  ><img src="images/somi10.webp" alt="" />
-                  <p>Áo sơ mi nâu</p></a
-                >
-              </div>
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="aosomi10.html"
+                ><img src="images/somi10.webp" alt="" />
+                <p>Áo sơ mi nâu</p></a
+              >
+
               <div class="gia">250.00đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <div>
-                <a href=""
-                  ><img src="images/somi11.webp" alt="" />
-                  <p>Áo sơ form rộng tay ngắn</p></a
-                >
-              </div>
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="aosomi11.html"
+                ><img src="images/somi11.webp" alt="" />
+                <p>Áo sơ mi form rộng tay ngắn</p></a
+              >
+
               <div class="gia">250.00đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <div>
-                <a href=""
-                  ><img src="images/somi12.webp" alt="" />
-                  <p>Áo sơ mi GodMother tay ngắn</p></a
-                >
-              </div>
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="somi12"
+                ><img src="images/somi12.webp" alt="" />
+                <p>Áo sơ mi GodMother tay ngắn</p></a
+              >
+
               <div class="gia">250.00đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
           </div>
         </div>
 
-        <div>
+        <div class="danhmucs">
           <!--Áo khoác-->
           <div class="font"><a href="aokhoac.html">Áo khoác</a></div>
           <div class="cloths">
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="aokhoac1.html"
                 ><img src="images/aokhoac1.webp" alt="" />
                 <p>Áo khoác đen 2 lớp</p></a
               >
               <div class="gia">180.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="aokhoac2.html"
                 ><img src="images/aokhoac2.webp" alt="" />
                 <p>Áo khoác xanh sọc vàng đen</p></a
               >
               <div class="gia">200.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="aokhoac3.html"
                 ><img src="images/aokhoac3.webp" alt="" />
                 <p>Áo khoác bomber vàng</p></a
               >
               <div class="gia">280.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="aokhoac4.html"
                 ><img src="images/aokhoac4.webp" alt="" />
                 <p>Áo khoác bomber trắng xám</p></a
               >
               <div class="gia">380.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="aokhoac5.html"
                 ><img src="images/aokhoac5.webp" alt="" />
                 <p>Áo khoác bomber xám</p></a
               >
               <div class="gia">380.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="aokhoac6.html"
                 ><img src="images/aokhoac6.webp" alt="" />
                 <p>Áo khoác jean đen</p></a
               >
               <div class="gia">350.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="aokhoac7.html"
                 ><img src="images/aokhoac7.webp" alt="" />
                 <p>Áo khoác bomber GodMother</p></a
               >
               <div class="gia">360.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="aokhoac8.html"
                 ><img src="images/aokhoac8.webp" alt="" />
                 <p>Áo khoác bomber đỏ trắng God</p></a
               >
               <div class="gia">380.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
           </div>
         </div>
 
-        <div>
+        <div class="danhmucs">
           <!--Hoodie-->
           <div class="font">
             <a href="hoodie.html"><p>Hoodie</p></a>
           </div>
           <div class="cloths">
-            <div>
-              <div>
-                <a href=""
-                  ><img src="images/hoodie9.webp" alt="" />
-                  <p>Hoodie Alex Cool</p></a
-                >
-              </div>
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="hoodie9.html"
+                ><img src="images/hoodie9.webp" alt="" />
+                <p>Hoodie Alex Cool</p></a
+              >
+
               <div class="gia"><p>200.000đ</p></div>
-              <div class="buttons">
-                <button>Mua ngay</button> <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="hoodie2.html"
                 ><img src="images/hoodie2.webp" alt="" />
                 <p>Hoodie trắng basic</p></a
               >
               <div class="gia">180.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="hoodie3.html"
                 ><img src="images/hoodie3.webp" alt="" />
                 <p>Hoodie đen basic</p></a
               >
               <div class="gia">190.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="hoodie4.html"
                 ><img src="images/hoodie4.webp" alt="" />
                 <p>Hoodie trắng logo</p></a
               >
               <div class="gia">280.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="hoodie5.html"
                 ><img src="images/hoodie5.webp" alt="" />
                 <p>Hoodie trắng logo cappy para</p></a
               >
               <div class="gia">280.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="hoodie6.html"
                 ><img src="images/hoodie6.webp" alt="" />
                 <p>Hoodie trắng logo Dual Match</p></a
               >
               <div class="gia">280.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="hoodie7.html"
                 ><img src="images/hoodie7.webp" alt="" />
                 <p>Hoodie trắng WinD</p></a
               >
               <div class="gia">280.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="hoodie8.html"
                 ><img src="images/hoodie8.webp" alt="" />
                 <p>Hoodie Vestores</p></a
               >
               <div class="gia">280.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
           </div>
         </div>
-        <div>
+        <div class="danhmucs">
           <!--Quần-->
           <div class="font"><a href="quan.html">Quần</a></div>
           <div class="cloths">
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="quanshort.html"
                 ><img src="images/quanshortkaki.webp" alt="" />
                 <p>Quần short kaki trắng</p>
               </a>
-              <div class="gia">200.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
+              <div class="gia">170.000đ</div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="quanJogger.html"
                 ><img src="images/Jogger3soc.webp" alt="" />
                 <p>Quần Jogger 3 sọc</p>
               </a>
               <div class="gia">300.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="quanjean.html"
                 ><img src="images/quanjeanongrong.webp" alt="" />
                 <p>Quần jean ống rộng</p>
               </a>
               <div class="gia">280.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="quanongrong.html"
                 ><img src="images/quanongrongatrastino.webp" alt="" />
                 <p>Quần ống rộng Atrastino</p>
               </a>
               <div class="gia">400.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="quan1.html"
                 ><img src="images/quan1.webp" alt="" />
                 <p>Quần ống rộng Baggy</p>
               </a>
               <div class="gia">400.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="quan2.html"
                 ><img src="images/quan2.webp" alt="" />
                 <p>Quần short nam unisex</p>
               </a>
               <div class="gia">400.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="quan3.html"
                 ><img src="images/quan3.webp" alt="" />
                 <p>Quần ống rộng nữ unisex</p>
               </a>
               <div class="gia">400.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="quan4.html"
                 ><img src="images/quan4.webp" alt="" />
                 <p>Quần jean trắng</p>
               </a>
               <div class="gia">400.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="quanstripped.html"
                 ><img src="images/quanstripped.webp" alt="" />
                 <p>Quần sọc nữ Stripped</p>
               </a>
               <div class="gia">400.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="quan5.html"
                 ><img src="images/quan5.webp" alt="" />
                 <p>Quần short nam đen</p>
               </a>
               <div class="gia">400.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="quan6.html"
                 ><img src="images/quan6.webp" alt="" />
-                <p>Quần hort nam kaki nâu</p>
+                <p>Quần short nam kaki nâu</p>
               </a>
               <div class="gia">400.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
 
-            <div>
-              <a href=""
+            <!-- sửa này thêm dòng product để gọi đc tk tim kiếm -->
+            <div class="product-item">
+              <a href="quan7.html"
                 ><img src="images/quan7.webp" alt="" />
                 <p>Quần Halorift nam</p>
               </a>
               <div class="gia">400.000đ</div>
-              <div class="buttons">
-                <button>Mua ngay</button>
-                <button>Thêm vào giỏ hàng</button>
-              </div>
             </div>
           </div>
         </div>
-        <div class="thong_bao">Thêm vào giỏ hàng thành công !</div>
       </main>
       <div class="ban_quyen">
         <footer>
