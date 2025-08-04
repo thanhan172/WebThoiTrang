@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Bảng size sản phẩm</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color:blanchedalmond;
+      padding: 45px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .bảng-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 50px;
+    }
+
+    .bảng {
+      border-collapse: collapse;
+      width: 500px;
+      height: 350px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .bảng caption {
+      font-size: 25px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #444;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    tr:nth-child(even) {
+      background-color: #fafafa;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>BẢNG SIZE SẢN PHẨM</h1>
+
+  <div class="bảng-container">
+
+    <!-- Bảng size áo -->
+    <table class="bảng">
+      <caption>Size Áo</caption>
+      <tr>
+        <th>Size</th>
+        <th>Cân nặng (kg)</th>
+        <th>Chiều cao (m)</th>
+        <th>Dài áo (cm)</th>
+      </tr>
+      <tr>
+        <td>S</td>
+        <td>>45kg</td>
+        <td>1m45 - 1m55</td>
+        <td>65</td>
+      </tr>
+      <tr>
+        <td>M</td>
+        <td>>50kg</td>
+        <td>1m55 - 1m65</td>
+        <td>70</td>
+      </tr>
+      <tr>
+        <td>L</td>
+        <td>>55kg</td>
+        <td>1m65 - 1m70</td>
+        <td>75</td>
+      </tr>
+      <tr>
+        <td>XL</td>
+        <td>>65kg</td>
+        <td>>1m70</td>
+        <td>77</td>
+      </tr>
+    </table>
+
+    <!-- Bảng size quần -->
+    <table class="bảng">
+      <caption>Size Quần</caption>
+      <tr>
+        <th>Size</th>
+        <th>Cân nặng (kg)</th>
+        <th>chiều cao (m)</th>
+        <th>Dài quần (cm)</th>
+      </tr>
+      <tr>
+        <td>S</td>
+        <td>>40kg</td>
+        <td>1m45 - 1m50</td>
+        <td>80</td>
+      </tr>
+      <tr>
+        <td>M</td>
+        <td>>50kg</td>
+        <td>1m50 - 1m60</td>
+        <td>85</td>
+      </tr>
+      <tr>
+        <td>L</td>
+        <td>>55kg</td>
+        <td>1m60 - 1m70</td>
+        <td>92</td>
+      </tr>
+      <tr>
+        <td>XL</td>
+        <td>>60kg</td>
+        <td>>1m70</td>
+        <td>96</td>
+      </tr>
+    </table>
+
+  </div>
+
+</body>
+</html>
