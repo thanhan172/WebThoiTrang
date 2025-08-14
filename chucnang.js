@@ -1,10 +1,8 @@
 document.querySelector(".gio_hang").addEventListener("click", function () {
-  // chuyển sang trang giỏ hàng
   window.location.href = "gio_hang.html";
 });
 
 function themvaogiohang(product) {
-  //hàm lưu sản phẩm vào localstorage để bỏ vào giỏ hàng
   let giohang = JSON.parse(localStorage.getItem("giohang")) || [];
   const index = giohang.findIndex(
     (sp) =>
@@ -34,7 +32,6 @@ function themvaogiohang(product) {
 }
 
 function capnhatsoluong() {
-  //Hàm cập nhật số lượng sản phẩm
   const giohang = JSON.parse(localStorage.getItem("giohang")) || [];
   const soluong = document.querySelector(".gio_hang_sl");
   soluong.innerText = giohang.length;
@@ -71,7 +68,6 @@ document.querySelectorAll(".tung_loai_sp").forEach((khungSP) => {
   });
 });
 function inGioHang() {
-  // Hàm in các sản phẩm ra giỏ hàng
   const list = JSON.parse(localStorage.getItem("giohang")) || [];
   const khung = document.querySelector(".InGioHang");
 
@@ -120,10 +116,9 @@ function XoaSanPham(index) {
   capnhatsoluong();
   inGioHang();
 }
-document.addEventListener("DOMContentLoaded", capnhatsoluong); // Cập nhật số lượng mỗi khi load lại trang
-document.addEventListener("DOMContentLoaded", inGioHang); // Để hiện giỏ hàng
+document.addEventListener("DOMContentLoaded", capnhatsoluong);
+document.addEventListener("DOMContentLoaded", inGioHang);
 
-/* lọc theo giá */
 function locTheoGia() {
   const filterValue = document.getElementById("filterPrice").value;
   const Danhmucs = document.querySelectorAll(".danhmucs");
@@ -157,12 +152,20 @@ function locTheoGia() {
 }
 
 /* tim kiếm */
+function xoaDauTiengViet(str) {
+  return str
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/đ/g, "d")
+    .replace(/Đ/g, "D");
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   const nutTimKiem = document.querySelector(".search_nut");
   const oNhap = document.querySelector(".search_input");
 
   function timKiemSanPham() {
-    const tuKhoa = oNhap.value.toLowerCase().trim();
+    const tuKhoa = xoaDauTiengViet(oNhap.value.toLowerCase().trim());
     const dsDanhmuc = document.querySelectorAll(".danhmucs");
     dsDanhmuc.forEach(function (Danhmuc) {
       const dsSanPham = Danhmuc.querySelectorAll(".product-item");
@@ -170,7 +173,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
       dsSanPham.forEach(function (sp) {
         const tenSP = sp.querySelector("p").innerText.toLowerCase();
-        if (tenSP.includes(tuKhoa)) {
+        const tenSPKhongDau = xoaDauTiengViet(tenSP);
+        if (tenSPKhongDau.includes(tuKhoa)) {
           sp.style.display = "inline-block";
           Cosp = true;
         } else {
@@ -192,26 +196,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
-document.addEventListener("DOMContentLoaded", function () {
-  const size = document.querySelectorAll(".size");
-  size.forEach((option) => {
-    option.addEventListener("click", function () {
-      size.forEach((opt) => opt.classList.remove("active"));
-      this.classList.add("active");
-    });
+$(document).ready(function () {
+  $(".size").click(function () {
+    $(".size").removeClass("active");
+    $(this).addClass("active");
   });
-});
-
-const hinhanh = document.querySelector(".hinh_anh");
-const hinh_anh_full = document.getElementById("full");
-const daux = document.getElementById("dau_x");
-const zoom = document.getElementById("Imgzoom");
-
-hinhanh.addEventListener("click", function () {
-  zoom.src = this.src;
-  hinh_anh_full.style.display = "flex";
-});
-
-daux.addEventListener("click", function () {
-  hinh_anh_full.style.display = "none";
 });
